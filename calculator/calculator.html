@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <input type="text" id="result" disabled>
+            <div class="grid">
+                <button draggable="true" ondragstart="drag(event)" onclick="clearResult()">C</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="divide()" style="font-size: xx-large;">÷</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="multiply()" style="font-size: xx-large;">×</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="undo()">⌫</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(7)">7</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(8)">8</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(9)">9</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="minus()" style="font-size: xx-large;">-</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(4)">4</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(5)">5</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(6)">6</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="plus()" style="font-size: xx-large;">+</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(1)">1</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(2)">2</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(3)">3</button>
+                <!-- Fraction button -->
+                <button draggable="true" ondragstart="drag(event)" class="fraction-btn" onclick="fraction()">
+                    <div class="fraction">
+                        <span class="numerator">■</span>
+                        <span class="fraction-bar"> ─ </span> 
+                        <span class="denominator">□</span>
+                    </div>
+                </button>
+                <button draggable="true" ondragstart="drag(event)" onclick="percentage()">%</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult(0)">0</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="addToResult('.')">.</button>
+                <button draggable="true" ondragstart="drag(event)" onclick="equals()">=</button> <!-- This button spans two rows -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
